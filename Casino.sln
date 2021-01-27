@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Casino", "Casino\Casino.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Casino.ConsoleClient", "Casino.ConsoleClient\Casino.ConsoleClient.csproj", "{FB609453-8EB3-413C-A23B-29A5C58AD1A6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Casino.Tests", "Casino.Tests\Casino.Tests.csproj", "{F803D6CD-62F8-44FE-9CFC-99D14DF172D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Casino.Tests", "Casino.Tests\Casino.Tests.csproj", "{F803D6CD-62F8-44FE-9CFC-99D14DF172D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
