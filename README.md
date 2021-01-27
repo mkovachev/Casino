@@ -10,7 +10,7 @@ The Casino has currently one slot machine implemented.
 
 <ol>
 <li>The slot machine consists of 4 rows of 3 symbols each.</li>
-<li>Each symbol has a probability chance to appear and a coefficient, which is used for calculating the stage won amount. The <br>won amount</br> is the sum of the coefficients of the symbols on the winning
+<li>Each symbol has a probability chance to appear and a coefficient, which is used for calculating the stage won amount. The <b>won amount</b> is the sum of the coefficients of the symbols on the winning
 row(s), multiplied by the bet amount. The <b>total balance</b> calculation formula is as follows:</li>
 <li><b>{Total balance} = ({Total balance} - {Bet amount}) + {Won amount}</b></li>
 <li>The Wildcard symbol can match with any other symbol, but has a coefficient of 0</li>
