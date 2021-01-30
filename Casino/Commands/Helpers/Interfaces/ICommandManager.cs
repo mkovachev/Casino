@@ -2,6 +2,6 @@
 {
     public interface ICommandManager
     {
-        decimal Handle();
+        decimal ExecuteCommand(ICommand command);
     }
 }

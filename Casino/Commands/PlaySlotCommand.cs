@@ -6,7 +6,7 @@ using Casino.Infrastructure.Interfaces;
 
 namespace Casino.Commands
 {
-    public class PlaySlotCommand : ICommand
+    public class PlaySlotCommand : IPlaySlotCommand
     {
         private readonly ISymbolManager symbolManager;
         private readonly ISlotFactory slotFactory;

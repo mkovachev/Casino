@@ -17,16 +17,17 @@ namespace Casino.ConsoleClient.IoCConfig
             builder.RegisterAssemblyTypes(currentAssembly)
                    .AsImplementedInterfaces();
 
-            builder.RegisterType<CasinoEngine>().As<IEngine>().SingleInstance();
-
-            builder.RegisterType<PlaySlotCommand>().As<ICommand>();
-
-            builder.RegisterType<BalanceManager>().As<IBalanceManager>().SingleInstance();
-            builder.RegisterType<CommandManager>().As<ICommandManager>().SingleInstance();
-            builder.RegisterType<SymbolManager>().As<ISymbolManager>().SingleInstance();
-
             builder.RegisterType<SlotFactory>().As<ISlotFactory>().SingleInstance();
             builder.RegisterType<SymbolFactory>().As<ISymbolFactory>().SingleInstance();
+
+            builder.RegisterType<PlaySlotCommand>().As<IPlaySlotCommand>();
+
+            builder.RegisterType<CommandManager>().As<ICommandManager>().SingleInstance();
+            builder.RegisterType<BalanceManager>().As<IBalanceManager>().SingleInstance();
+            builder.RegisterType<SymbolManager>().As<ISymbolManager>().SingleInstance();
+
+            builder.RegisterType<CasinoEngine>().As<IEngine>().SingleInstance();
+
         }
     }
 }
