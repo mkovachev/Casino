@@ -13,16 +13,16 @@ namespace Casino.Engine
         private readonly IMath mathProvider;
         private readonly IBalanceManager balanceManager;
         private readonly ICommandManager commandManager;
-        private readonly IPlaySlotCommand command;
+        private readonly IPlaySlotCommand playSlotCommand;
 
-        public CasinoEngine(IReader reader, IWriter writer, ICommandManager commandManager, IBalanceManager balanceManager, IMath mathProvider, IPlaySlotCommand command)
+        public CasinoEngine(IReader reader, IWriter writer, ICommandManager commandManager, IBalanceManager balanceManager, IMath mathProvider, IPlaySlotCommand playSlotCommand)
         {
             this.reader = reader;
             this.writer = writer;
             this.commandManager = commandManager;
             this.balanceManager = balanceManager;
             this.mathProvider = mathProvider;
-            this.command = command;
+            this.playSlotCommand = playSlotCommand;
         }
 
         public void Start()
@@ -52,7 +52,7 @@ namespace Casino.Engine
                     }
 
                     // Play
-                    var totalCoefficient = commandManager.ExecuteCommand(this.command);
+                    var totalCoefficient = commandManager.ExecuteCommand(this.playSlotCommand);
 
                     // Calc balance
                     totalBalance = this.mathProvider.Round(this.balanceManager.Handle(totalCoefficient, betAmount, totalBalance), 2);
