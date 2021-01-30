@@ -17,9 +17,9 @@ namespace Casino.Tests.Casino.Commands.Helpers
         [Fact]
         public void Handle_Calls_PlaySlot_Handle_Once()
         {
-            var commandManager = new CommandManager(this.playSlot.Object);
+            var commandManager = new CommandManager();
 
-            var result = commandManager.Handle();
+            var result = commandManager.ExecuteCommand(this.playSlot.Object);
 
             playSlot.Verify(ps => ps.Execute(), Times.Once);
         }
@@ -27,9 +27,9 @@ namespace Casino.Tests.Casino.Commands.Helpers
         [Fact]
         public void Handle_Calls_PlaySlot_Handle_And_Returns_Decimal()
         {
-            var commandManager = new CommandManager(this.playSlot.Object);
+            var commandManager = new CommandManager();
 
-            var result = commandManager.Handle();
+            var result = commandManager.ExecuteCommand(this.playSlot.Object);
 
             playSlot.Verify(ps => ps.Execute(), Times.Once);
             Assert.IsType<decimal>(result);
